@@ -1,0 +1,153 @@
+SemEval-2018 Task 1: Affect in Tweets
+
+SemEval-2018: International Workshop on Semantic Evaluation will be held in conjunction with NAACL-2018 in New Orleans, LA, USA, June 5-6, 2018. 
+
+Cite this paper for the task: Semeval-2018 Task 1: Affect in Tweets. Saif M. Mohammad, Felipe Bravo-Marquez, Mohammad Salameh, and Svetlana Kiritchenko. In Proceedings of the International Workshop on Semantic Evaluation (SemEval-2018), New Orleans, LA, USA, June 2018.
+
+@InProceedings{SemEval2018Task1,
+ author = {Mohammad, Saif M. and Bravo-Marquez, Felipe and Salameh, Mohammad and Kiritchenko, Svetlana},
+ title = {SemEval-2018 {T}ask 1: {A}ffect in Tweets},
+ booktitle = {Proceedings of International Workshop on Semantic Evaluation (SemEval-2018)},
+ address = {New Orleans, LA, USA},
+ year = {2018}} 
+
+The Equity Evaluation Corpus (EEC), which consists of 8,640 English sentences carefully chosen to tease out biases towards certain races and genders is available here. The EEC was the mystery test set added to the tweets test sets for the English EI-reg and V-reg tasks. Below is the *Sem paper describing the EEC dataset and the bias evaluation.
+
+Examining Gender and Race Bias in Two Hundred Sentiment Analysis Systems. Svetlana Kiritchenko and Saif M. Mohammad. In Proceedings of the 7th Joint Conference on Lexical and Computational Semantics (*SEM), New Orleans, LA, USA, June 2018.
+
+Join the official task mailing group: EmotionIntensity@googlegroups.com
+
+It is crucial that you join the mailing list to receive the latest news and updates. Also note that even if you join the mailing list now, you will be able to see all messages posted earlier. 
+
+Evaluation phase has concluded. Over 70 teams participated. The official results have been posted.
+
+For teams that participated, please register your team (via this Google form)  by Feb 1st, 2018 (this is mandatory).  
+
+Background and Significance: We use language to communicate not only the emotion or sentiment we are feeling but also the intensity of the emotion or sentiment. For example, our utterances can convey that we are very angry, slightly sad, absolutely elated, etc. Here, intensity refers to the degree or amount of an emotion or degree of sentiment. We will refer to emotion-related categories such as anger, fear, sentiment, and arousal, by the term affect. Existing affect datasets are mainly annotated categorically without an indication of intensity. Further, past shared tasks have almost always been framed as classification tasks (identify one among n affect categories for this sentence). In contrast, it is often useful for applications to know the degree to which affect is expressed in text.
+
+Tasks: We present an array of tasks where systems have to automatically determine the intensity of emotions (E) and intensity of sentiment (aka valence V) of the tweeters from their tweets. (The term tweeter refers to the person who has posted the tweet.) We also include a multi-label emotion classification task for tweets. For each task, we provide separate training and test datasets for English, Arabic, and Spanish tweets. The individual tasks are described below:
+
+EI-reg (an emotion intensity regression task): Given a tweet and an emotion E, determine the  intensity of E that best represents the mental state of the tweeter—a real-valued score between 0 (least E) and 1 (most E).
+Separate datasets are provided for anger, fear, joy, and sadness.
+
+EI-oc (an emotion intensity ordinal classification task): Given a tweet and an emotion E, classify the tweet into one of four ordinal classes of intensity of E that best represents the mental state of the tweeter.
+Separate datasets are provided for anger, fear, joy, and sadness.
+
+V-reg (a sentiment intensity regression task): Given a tweet, determine the intensity of sentiment or valence (V) that best represents the mental state of the tweeter—a real-valued score between 0 (most negative) and 1 (most positive).
+
+V-oc (a sentiment analysis, ordinal classification, task): Given a tweet, classify it into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter.
+
+E-c (an emotion classification task): Given a tweet, classify it as 'neutral or no emotion' or as one, or more, of eleven given emotions that best represent the mental state of the tweeter.
+Here, E refers to emotion, EI refers to emotion intensity, V refers to valence or sentiment intensity, reg refers to regression, oc refers to ordinal classification, c refers to classification. 
+
+Together, these tasks encompass various emotion and sentiment analysis tasks. You are free to participate in any number of tasks and on any of the datasets. Further details on each of the tasks are provided below.
+
+1. Task EI-reg: Detecting Emotion Intensity (regression)
+
+Given:
+
+a tweet
+
+an emotion E (anger, fear, joy, or sadness)
+
+Task: determine the  intensity of E that best represents the mental state of the tweeter—a real-valued score between 0 and 1:
+
+a score of 1: highest amount of E can be inferred
+
+a score of 0: lowest amount of E can be inferred
+
+For each language: 4 training sets and 4 test sets: one for each emotion E.
+
+(Note that the absolute scores have no inherent meaning -- they are used only as a means to convey that the instances with higher scores correspond to a greater degree of E than instances with lower scores.)
+
+2. Task EI-oc: Detecting Emotion Intensity (ordinal classification)
+
+Given:
+
+a tweet
+
+an emotion E (anger, fear, joy, or sadness)
+
+Task: classify the tweet into one of four ordinal classes of intensity of E that best represents the mental state of the tweeter:
+
+0: no E can be inferred
+
+1: low amount of E can be inferred
+
+2: moderate amount of E can be inferred
+
+3: high amount of E can be inferred
+
+For each language: 4 training sets and 4 test sets: one for each emotion E.
+
+3. Task V-reg: Detecting Valence or Sentiment Intensity (regression)
+
+Given:
+
+a tweet
+
+
+Task: determine the intensity of sentiment or valence (V) that best represents the mental state of the tweeter—a real-valued score between 0 and 1:
+
+a score of 1: most positive mental state can be inferred
+
+a score of 0: most negative mental state can be inferred
+
+For each language: 1 training set, 1 test set.
+
+(Note that the absolute scores have no inherent meaning -- they are used only as a means to convey that the instances with higher scores correspond to a greater degree of positive sentiment than instances with lower scores.) 
+
+4. Task V-oc: Detecting Valence (ordinal classification) -- This is the traditional Sentiment Analysis Task
+
+Given:
+
+a tweet
+
+
+Task: classify the tweet into one of seven ordinal classes, corresponding to various levels of positive and negative sentiment intensity, that best represents the mental state of the tweeter:
+
+3: very positive mental state can be inferred
+
+2: moderately positive mental state can be inferred
+
+1: slightly positive mental state can be inferred
+
+0: neutral or mixed mental state can be inferred
+
+-1: slightly negative mental state can be inferred
+
+-2: moderately negative mental state can be inferred
+
+-3: very negative mental state can be inferred
+
+For each language: 1 training set, 1 test set. 
+
+5. Task E-c: Detecting Emotions (multi-label classification) -- This is a traditional Emotion Classification Task
+
+Given:
+
+a tweet
+
+
+Task: classify the tweet as 'neutral or no emotion' or as one, or more, of eleven given emotions that best represent the mental state of the tweeter:
+
+anger (also includes annoyance and rage) can be inferred
+anticipation (also includes interest and vigilance) can be inferred
+disgust (also includes disinterest, dislike and loathing) can be inferred
+fear (also includes apprehension, anxiety, concern, and terror) can be inferred
+joy (also includes serenity and ecstasy) can be inferred
+love (also includes affection) can be inferred
+optimism (also includes hopefulness and confidence) can be inferred
+pessimism (also includes cynicism and lack of confidence) can be inferred
+sadness (also includes pensiveness and grief) can be inferred
+suprise (also includes distraction and amazement) can be inferred
+trust (also includes acceptance, liking, and admiration) can be inferred
+
+For each language: 1 training set, 1 test set.
+
+(Note that the set of emotions includes the eight basic emotions as per Plutchik (1980), as well as a few other emotions that are common in tweets (love, optimism, and pessimism).)
+
+Paper: Participants will be given the opportunity to write a system-description paper that describes their system, resources used, results, and analysis. This paper will be part of the official SemEval-2018 proceedings. The paper is to be four pages long plus two pages at most for references. The papers are to follow the format and style files provided by ACL/NAACL/EMNLP-2018.
+
+Related Past Shared Tasks on Affect Intensity
+
